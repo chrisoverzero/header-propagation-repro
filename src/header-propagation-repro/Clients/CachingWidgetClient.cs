@@ -1,7 +1,7 @@
 namespace Header.Propagation.Repro;
 
 /// <summary>Operates on widgets with caching.</summary>
-sealed partial class CachingWidgetClient(HttpWidgetClient innerClient, HybridCache cache)
+sealed partial class CachingWidgetClient(HttpWidgetClient innerClient, HybridCache cache, ILogger<CachingWidgetClient> logger)
     : IWidgetClient
 {
     readonly IWidgetClient _innerClient = innerClient;
@@ -9,7 +9,7 @@ sealed partial class CachingWidgetClient(HttpWidgetClient innerClient, HybridCac
     /// <inheritdoc/>
     async ValueTask<Widget?> IWidgetClient.GetWidgetAsync(int id, CancellationToken cancellationToken)
     {
-        _ = 0;
+        GettingWidget(id);
 
         // note(cosborn) This call will succeed. (Well, -ish. It'll make the request; I hope that's enough.)
         _ = await _innerClient.GetWidgetAsync(id, cancellationToken);
@@ -26,6 +26,9 @@ sealed partial class CachingWidgetClient(HttpWidgetClient innerClient, HybridCac
             },
             cancellationToken: cancellationToken);
     }
+
+    [LoggerMessage(LogLevel.Debug, "About to try to get widget {id}.")]
+    partial void GettingWidget(int id);
 
     /// <summary>Serializes and deserializes fulfillment locations for caching.</summary>
     public sealed class Serializer
