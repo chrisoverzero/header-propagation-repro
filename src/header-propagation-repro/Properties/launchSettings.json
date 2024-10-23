@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json.schemastore.org/launchsettings.json",
+  "profiles": {
+    "Http": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "applicationUrl": "",
+      "launchBrowser": false,
+      "launchUrl": "/widgets/1",
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "development"
+      }
+    }
+  }
+}

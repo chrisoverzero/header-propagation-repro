@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <OutputType>exe</OutputType>
+    <EnablePreviewFeatures>true</EnablePreviewFeatures>
+    <GenerateRequiresPreviewFeaturesAttribute>true</GenerateRequiresPreviewFeaturesAttribute>
+    <EnableRequestDelegateGenerator>true</EnableRequestDelegateGenerator>
+    <EnableConfigurationBindingGenerator>true</EnableConfigurationBindingGenerator>
+    <NoWarn>$(NoWarn);EXTEXP0018</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.HeaderPropagation" />
+    <PackageReference Include="Microsoft.Extensions.Caching.Hybrid" />
+
+    <Using Include="System.Buffers" />
+    <Using Include="System.Text.Json" />
+    <Using Include="System.Text.Json.Serialization" />
+    <Using Include="Header.Propagation.Repro" />
+    <Using Include="Microsoft.Extensions.Caching.Hybrid" />
+    <Using Include="Microsoft.Extensions.DependencyInjection" />
+    <Using Static="true" Include="System.Net.Http.HttpCompletionOption;" />
+    <Using Static="true" Include="System.Text.Json.JsonSerializerDefaults" />
+    <Using Static="true" Include="System.Text.Json.Serialization.JsonKnownNamingPolicy" />
+    <Using Static="true" Include="Header.Propagation.Repro.IWidgetClient" />
+    <Using Static="true" Include="Microsoft.Net.Http.Headers.HeaderNames" />
+    <Using Alias="CI" Include="System.Globalization.CultureInfo" />
+  </ItemGroup>
+
+</Project>

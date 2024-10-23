@@ -1,0 +1,15 @@
+<Project>
+
+  <PropertyGroup>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageVersion Include="Microsoft.AspNetCore.HeaderPropagation" Version="9.0.0-rc.2.24474.3" />
+    <PackageVersion Include="Microsoft.Extensions.Caching.Hybrid" Version="9.0.0-preview.9.24507.7" />
+
+    <GlobalPackageReference Include="Roslynator.Analyzers" Version="4.12.7" />
+    <GlobalPackageReference Include="StyleCop.Analyzers" Version="1.2.0-beta.556" />
+  </ItemGroup>
+
+</Project>

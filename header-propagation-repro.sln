@@ -1,0 +1,22 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "header-propagation-repro", "src\header-propagation-repro\header-propagation-repro.csproj", "{E92ED22F-BBFA-43A0-A238-9B535BA5F50F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E92ED22F-BBFA-43A0-A238-9B535BA5F50F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E92ED22F-BBFA-43A0-A238-9B535BA5F50F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E92ED22F-BBFA-43A0-A238-9B535BA5F50F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E92ED22F-BBFA-43A0-A238-9B535BA5F50F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
